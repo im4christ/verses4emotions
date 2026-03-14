@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SEO — Primary Meta Tags                   -->
+<!-- ═══════════════════════════════════════════ -->
+<title>Verses4Emotions — Find Bible Verses Based on Your Emotions</title>
+<meta name="title" content="Verses4Emotions — Find Bible Verses Based on Your Emotions">
+<meta name="description" content="Find Bible verses based on how you feel. Whether you're peaceful, sad, angry, lonely, or overwhelmed — discover God's Word for every emotion. Christ-centered daily verses.">
+<meta name="keywords" content="verses4emotions, Bible verses by emotion, Bible verses for feelings, Christian emotional support, Bible verses for sad, Bible verses for anxiety, daily Bible verse, Christ centered, scripture for emotions, verses for peace, Bible verses for depression, verses for loneliness">
+<meta name="author" content="Verses4Emotions">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="3 days">
+<link rel="canonical" href="https://verses4emotions.github.io/">
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SEO — Open Graph (Facebook, WhatsApp)     -->
+<!-- ═══════════════════════════════════════════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://verses4emotions.github.io/">
+<meta property="og:title" content="Verses4Emotions — Find Bible Verses Based on Your Emotions">
+<meta property="og:description" content="Find Bible verses based on how you feel. Peaceful, sad, angry, lonely or overwhelmed — discover God's Word for every emotion. Daily Bible verses updated automatically.">
+<meta property="og:site_name" content="Verses4Emotions">
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SEO — Twitter / X Card                    -->
+<!-- ═══════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verses4Emotions — Find Bible Verses Based on Your Emotions">
+<meta name="twitter:description" content="Find Bible verses based on how you feel. Christ-centered daily verses for every emotion.">
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  SEO — Structured Data (Google Rich Result)-->
+<!-- ═══════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Verses4Emotions",
+  "alternateName": "Verses 4 Emotions",
+  "url": "https://verses4emotions.github.io/",
+  "description": "Find Bible verses based on your emotions to get more connected to the Lord. Daily Bible verses and scripture for every feeling.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://verses4emotions.github.io/",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Verses4Emotions",
+  "url": "https://verses4emotions.github.io/",
+  "description": "A Christ-centered platform helping people find Bible verses that match their emotions.",
+  "sameAs": [
+    "https://www.instagram.com/verses4emotions"
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --blush:#fdf0eb;--petal:#f5d5c8;--rose:#e8a898;
+  --dusty:#c97b6e;--gold:#c9995a;--text:#3a2a24;
+  --muted:#9a7060;--cream:#fffaf7;--card:#fff8f5;
+  --border:rgba(201,123,110,0.18);--shadow:rgba(201,123,110,0.12);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--blush);}
+::-webkit-scrollbar-thumb{background:var(--rose);border-radius:10px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes petalDrift{0%{transform:translateY(110vh) rotate(0deg);opacity:0;}10%{opacity:0.18;}90%{opacity:0.18;}100%{transform:translateY(-120px) rotate(400deg);opacity:0;}}
+@keyframes shimmer{0%,100%{opacity:0.5;}50%{opacity:1;}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 rgba(201,123,110,0);}50%{box-shadow:0 0 18px rgba(201,123,110,0.18);}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;background:rgba(253,240,235,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s;}
+nav.scrolled{box-shadow:0 4px 24px var(--shadow);}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none;}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--dusty);letter-spacing:0.08em;}
+.nav-links{display:flex;gap:4px;align-items:center;}
+.nav-links a{font-size:0.72rem;font-weight:400;letter-spacing:0.07em;color:var(--muted);text-decoration:none;padding:5px 11px;border-radius:20px;transition:all 0.25s;border:1px solid transparent;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{background:var(--petal);color:var(--dusty);border-color:var(--rose);}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px;background:none;border:none;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--dusty);border-radius:2px;transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;z-index:190;background:rgba(253,240,235,0.98);backdrop-filter:blur(16px);padding:16px 5%;flex-direction:column;gap:4px;border-bottom:1px solid var(--border);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:0.82rem;color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:10px;transition:all 0.2s;}
+.mobile-menu a:hover{background:var(--petal);color:var(--dusty);}
+
+/* HERO */
+#home{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 5% 70px;position:relative;overflow:hidden;text-align:center;}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 15% 55%,rgba(245,213,200,0.7) 0%,transparent 55%),radial-gradient(ellipse at 85% 20%,rgba(232,224,240,0.55) 0%,transparent 50%),radial-gradient(ellipse at 55% 88%,rgba(216,232,212,0.45) 0%,transparent 50%),var(--cream);}
+.petal-float{position:absolute;font-size:1.4rem;opacity:0;pointer-events:none;animation:petalDrift linear infinite;}
+.hero-content{position:relative;z-index:1;max-width:700px;}
+.hero-badge{display:inline-block;font-size:0.68rem;font-weight:400;letter-spacing:0.22em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fadeUp 0.7s 0.1s forwards;background:rgba(201,153,90,0.1);padding:6px 18px;border-radius:20px;border:1px solid rgba(201,153,90,0.25);}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5.8rem);font-weight:300;line-height:1.06;color:var(--text);margin-bottom:12px;opacity:0;animation:fadeUp 0.7s 0.25s forwards;}
+.hero-title em{font-style:italic;color:var(--dusty);}
+.hero-sub{font-size:clamp(0.88rem,2vw,1rem);font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:40px;opacity:0;animation:fadeUp 0.7s 0.4s forwards;}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--dusty);color:#fff;padding:14px 32px;border-radius:50px;font-size:0.8rem;font-weight:400;letter-spacing:0.1em;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;opacity:0;animation:fadeUp 0.7s 0.55s forwards;}
+.hero-cta:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,123,110,0.32);}
+.scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:0.63rem;letter-spacing:0.18em;color:var(--muted);text-transform:uppercase;opacity:0;animation:fadeIn 1s 1.5s forwards;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.scroll-hint::after{content:'';display:block;width:1px;height:36px;background:linear-gradient(to bottom,var(--rose),transparent);animation:shimmer 2s infinite;}
+
+/* DAILY VERSE */
+#daily{padding:72px 5%;background:linear-gradient(135deg,rgba(245,213,200,0.3) 0%,rgba(232,224,240,0.2) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.section-eyebrow{font-size:0.68rem;font-weight:400;letter-spacing:0.22em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;text-align:center;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;color:var(--text);margin-bottom:44px;text-align:center;}
+.section-title em{font-style:italic;color:var(--dusty);}
+.daily-card{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:24px;padding:48px 52px;text-align:center;position:relative;overflow:hidden;box-shadow:0 10px 50px var(--shadow);animation:glow 5s infinite;}
+.daily-card::before{content:'✦';position:absolute;top:22px;right:28px;font-size:1rem;color:var(--rose);opacity:0.5;animation:shimmer 3s infinite;}
+.daily-card::after{content:'✦';position:absolute;bottom:22px;left:28px;font-size:0.7rem;color:var(--rose);opacity:0.3;animation:shimmer 3s 1.5s infinite;}
+.daily-verse-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);font-style:italic;font-weight:300;line-height:1.8;color:var(--text);margin-bottom:22px;}
+.daily-verse-ref{font-size:0.73rem;font-weight:500;letter-spacing:0.14em;color:var(--dusty);text-transform:uppercase;}
+
+/* EMOTIONS */
+#emotions{padding:80px 5%;}
+.emotions-header{text-align:center;margin-bottom:52px;}
+.emotions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;max-width:1000px;margin:0 auto;}
+.emotion-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 8px;border-radius:14px;border:1.5px solid var(--border);background:var(--card);font-family:'Jost',sans-serif;font-size:0.81rem;font-weight:400;color:var(--text);cursor:pointer;transition:all 0.28s;letter-spacing:0.03em;}
+.emotion-btn:hover{background:var(--petal);border-color:var(--rose);color:var(--dusty);transform:translateY(-3px);box-shadow:0 6px 20px var(--shadow);}
+.emotion-btn.active{background:var(--dusty);color:#fff;border-color:var(--dusty);transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,123,110,0.38);}
+.emotion-emoji{font-size:1.1rem;}
+
+/* VERSES PANEL */
+#verses-panel{max-width:760px;margin:0 auto;padding:0 5% 80px;display:none;}
+#verses-panel.visible{display:block;animation:fadeUp 0.5s forwards;}
+.verses-panel-header{text-align:center;margin-bottom:36px;padding:36px;background:linear-gradient(135deg,var(--petal),rgba(232,224,240,0.5));border-radius:22px;border:1px solid var(--border);}
+.verses-panel-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:300;color:var(--text);}
+.verses-panel-header h2 em{font-style:italic;color:var(--dusty);}
+.verse-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin-bottom:14px;transition:all 0.3s;position:relative;overflow:hidden;}
+.verse-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--rose),var(--petal));border-radius:3px 0 0 3px;}
+.verse-card:hover{transform:translateY(-2px);box-shadow:0 10px 32px var(--shadow);border-color:var(--rose);}
+.verse-ref{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;color:var(--dusty);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.verse-ref::before{content:'📖';font-size:0.9rem;}
+.verse-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.22rem);font-style:italic;font-weight:300;line-height:1.82;color:var(--text);}
+.verses-empty{text-align:center;padding:52px;color:var(--muted);font-style:italic;font-size:0.95rem;}
+
+/* CONNECT */
+#connect{padding:72px 5%;text-align:center;background:linear-gradient(135deg,rgba(245,213,200,0.3),rgba(216,232,212,0.22));}
+.insta-card{max-width:460px;margin:32px auto 0;background:var(--card);border:1px solid var(--border);border-radius:22px;padding:36px;display:flex;flex-direction:column;align-items:center;gap:16px;box-shadow:0 8px 36px var(--shadow);}
+.insta-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;}
+.insta-card p{font-size:0.87rem;color:var(--muted);line-height:1.65;text-align:center;}
+.insta-link{display:inline-flex;align-items:center;gap:8px;background:var(--dusty);color:#fff;padding:12px 28px;border-radius:50px;font-size:0.78rem;letter-spacing:0.08em;text-decoration:none;transition:all 0.3s;}
+.insta-link:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 8px 22px rgba(201,123,110,0.3);}
+
+/* FOOTER */
+footer{padding:36px 5%;text-align:center;border-top:1px solid var(--border);background:var(--blush);}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--dusty);letter-spacing:0.1em;margin-bottom:8px;}
+footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.06em;}
+
+/* EDIT FAB */
+.edit-fab{position:fixed;bottom:28px;right:28px;z-index:150;background:var(--dusty);color:#fff;border:none;width:54px;height:54px;border-radius:50%;cursor:pointer;font-size:1.2rem;box-shadow:0 4px 22px rgba(201,123,110,0.42);transition:all 0.3s;display:flex;align-items:center;justify-content:center;}
+.edit-fab:hover{background:var(--gold);transform:scale(1.1);}
+
+/* EDIT MODAL */
+.edit-modal{display:none;position:fixed;inset:0;z-index:300;background:rgba(58,42,36,0.5);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;}
+.edit-modal.open{display:flex;animation:fadeIn 0.3s forwards;}
+.edit-box{background:var(--cream);border-radius:22px;padding:38px;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;box-shadow:0 24px 70px rgba(58,42,36,0.2);}
+.edit-box h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--text);margin-bottom:6px;}
+.edit-box>p{font-size:0.8rem;color:var(--muted);margin-bottom:26px;}
+.edit-field{margin-bottom:16px;}
+.edit-field label{display:block;font-size:0.7rem;font-weight:500;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;margin-bottom:6px;}
+.edit-field select,.edit-field input,.edit-field textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:'Jost',sans-serif;font-size:0.88rem;background:var(--card);color:var(--text);transition:border-color 0.2s;resize:vertical;}
+.edit-field select:focus,.edit-field input:focus,.edit-field textarea:focus{outline:none;border-color:var(--rose);}
+.edit-actions{display:flex;gap:10px;margin-top:22px;}
+.btn-primary{flex:1;padding:12px;background:var(--dusty);color:#fff;border:none;border-radius:10px;font-family:'Jost',sans-serif;font-size:0.82rem;letter-spacing:0.06em;cursor:pointer;transition:all 0.25s;}
+.btn-primary:hover{background:var(--gold);}
+.btn-secondary{padding:12px 20px;background:transparent;color:var(--muted);border:1.5px solid var(--border);border-radius:10px;font-family:'Jost',sans-serif;font-size:0.82rem;cursor:pointer;transition:all 0.25s;}
+.btn-secondary:hover{border-color:var(--rose);color:var(--dusty);}
+.manage-list{margin-top:26px;border-top:1px solid var(--border);padding-top:22px;}
+.manage-list h4{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;margin-bottom:12px;}
+.manage-item{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--blush);border-radius:8px;margin-bottom:8px;font-size:0.8rem;gap:10px;}
+.manage-item span{flex:1;color:var(--text);}
+.del-btn{background:none;border:none;color:var(--rose);cursor:pointer;font-size:0.9rem;padding:2px 6px;border-radius:4px;transition:background 0.2s;}
+.del-btn:hover{background:var(--petal);}
+
+/* TOAST */
+.toast{position:fixed;bottom:100px;right:28px;z-index:400;background:var(--text);color:#fff;padding:12px 22px;border-radius:12px;font-size:0.8rem;opacity:0;transform:translateY(10px);transition:all 0.3s;pointer-events:none;}
+.toast.show{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .daily-card{padding:30px 24px;}
+  .verse-card{padding:22px 20px;}
+  .edit-box{padding:26px 20px;}
+  .emotions-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;}
+}
+@media(max-width:480px){
+  .emotions-grid{grid-template-columns:repeat(3,1fr);}
+  .emotion-btn{padding:11px 6px;font-size:0.74rem;gap:5px;}
+}
+
+/* EDIT TABS */
+.edit-tabs{display:flex;gap:6px;margin-bottom:22px;background:var(--blush);padding:5px;border-radius:12px;}
+.edit-tab{flex:1;padding:9px 6px;border:none;background:transparent;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:400;color:var(--muted);cursor:pointer;border-radius:8px;transition:all 0.25s;letter-spacing:0.04em;}
+.edit-tab.active{background:var(--card);color:var(--dusty);box-shadow:0 2px 8px var(--shadow);}
+.edit-tab:hover:not(.active){color:var(--dusty);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;animation:fadeIn 0.3s forwards;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" onclick="showHome();return false;" href="#">
+    <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 5 C3 5 9 6 16 4 L16 24 C9 26 3 25 3 25 Z" fill="#f5d5c8" stroke="#c97b6e" stroke-width="0.9"/>
+      <path d="M31 5 C31 5 25 6 18 4 L18 24 C25 26 31 25 31 25 Z" fill="#fdf0eb" stroke="#c97b6e" stroke-width="0.9"/>
+      <path d="M16 4 L16 24" stroke="#c97b6e" stroke-width="1.6"/>
+      <path d="M18 4 L18 24" stroke="#c97b6e" stroke-width="1.6"/>
+      <rect x="16.3" y="1.5" width="2.2" height="12" rx="0.6" fill="#c97b6e"/>
+      <rect x="12.5" y="5" width="9.8" height="2.2" rx="0.6" fill="#c97b6e"/>
+      <path d="M6 10 Q10 9.5 14 10" stroke="#c97b6e" stroke-width="0.4" opacity="0.45"/>
+      <path d="M6 13.5 Q10 13 14 13.5" stroke="#c97b6e" stroke-width="0.4" opacity="0.45"/>
+      <path d="M6 17 Q10 16.5 14 17" stroke="#c97b6e" stroke-width="0.4" opacity="0.45"/>
+      <path d="M20 10 Q24 9.5 28 10" stroke="#c97b6e" stroke-width="0.4" opacity="0.45"/>
+      <path d="M20 13.5 Q24 13 28 13.5" stroke="#c97b6e" stroke-width="0.4" opacity="0.45"/>
+      <path d="M20 17 Q24 16.5 28 17" stroke="#c97b6e" stroke-width="0.4" opacity="0.45"/>
+      <path d="M3 25 Q17 27.5 31 25" stroke="#c97b6e" stroke-width="0.7" fill="none" opacity="0.35"/>
+    </svg>
+    <span class="nav-logo-text">VERSES4EMOTIONS</span>
+  </a>
+  <div class="nav-links">
+    <a href="#" onclick="showHome();return false;">Home</a>
+    <a href="#daily">Daily Verse</a>
+    <a href="#emotions">Emotions</a>
+    <a href="#connect">Connect</a>
+  </div>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showHome();toggleMobile();return false;">Home</a>
+  <a href="#daily" onclick="toggleMobile()">Daily Verse</a>
+  <a href="#emotions" onclick="toggleMobile()">Emotions</a>
+  <a href="#connect" onclick="toggleMobile()">Connect</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="petal-float" style="left:7%;animation-duration:14s;animation-delay:0s;">🌸</div>
+  <div class="petal-float" style="left:23%;animation-duration:19s;animation-delay:3s;">✦</div>
+  <div class="petal-float" style="left:52%;animation-duration:13s;animation-delay:7s;">🌸</div>
+  <div class="petal-float" style="left:76%;animation-duration:17s;animation-delay:1.5s;">✦</div>
+  <div class="petal-float" style="left:91%;animation-duration:22s;animation-delay:9s;">🌸</div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Christ Centered ✦</div>
+    <h1 class="hero-title">Find Verses 4<br><em>Ur Emotions</em></h1>
+    <p class="hero-sub">Find verses based on your emotions to get<br>more connected to the Lord…</p>
+    <button class="hero-cta" onclick="document.getElementById('emotions').scrollIntoView({behavior:'smooth'})">
+      How are you feeling today?
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</section>
+
+<!-- DAILY VERSE -->
+<section id="daily">
+  <div class="section-eyebrow">✦ Updated Every Day ✦</div>
+  <h2 class="section-title">Daily Verses <em>4 U…</em></h2>
+  <div class="daily-card">
+    <div class="daily-verse-text" id="dailyText"><em>Loading today's verse…</em></div>
+    <div class="daily-verse-ref" id="dailyRef"></div>
+  </div>
+</section>
+
+<!-- EMOTIONS -->
+<section id="emotions">
+  <div class="emotions-header">
+    <div class="section-eyebrow">✦ Choose Your Emotion ✦</div>
+    <h2 class="section-title">How are you feeling <em>today?</em></h2>
+  </div>
+  <div class="emotions-grid" id="emotionsGrid"></div>
+</section>
+
+<!-- VERSES PANEL -->
+<div id="verses-panel">
+  <div class="verses-panel-header">
+    <h2 id="versesPanelTitle"></h2>
+  </div>
+  <div id="versesContainer"></div>
+</div>
+
+<!-- CONNECT -->
+<section id="connect">
+  <div class="section-eyebrow">✦ Stay Connected ✦</div>
+  <h2 class="section-title">Support My <em>Christ-Centered</em> Page</h2>
+  <div class="insta-card">
+    <div class="insta-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </div>
+    <p>Follow for daily Bible verses, spiritual encouragement,<br>and more verses 4 your emotions 🙏</p>
+    <a class="insta-link" href="https://www.instagram.com" target="_blank">
+      Follow on Instagram ↗
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">VERSES4EMOTIONS</div>
+  <p>© 2025 VERSES4EMOTIONS. All rights reserved.</p>
+</footer>
+
+<!-- EDIT FAB -->
+<button class="edit-fab" onclick="openEdit()" title="Add a new verse ✦">✏️</button>
+
+<!-- EDIT MODAL -->
+<div class="edit-modal" id="editModal">
+  <div class="edit-box">
+    <h3>Manage Content ✦</h3>
+    <p>Add verses or create new emotion categories — all saved automatically</p>
+
+    <!-- TABS -->
+    <div class="edit-tabs">
+      <button class="edit-tab active" onclick="switchTab('verse',this)">📖 Add Verse</button>
+      <button class="edit-tab" onclick="switchTab('emotion',this)">😊 Add Emotion</button>
+      <button class="edit-tab" onclick="switchTab('manage',this)">🗂 Manage</button>
+    </div>
+
+    <!-- TAB: ADD VERSE -->
+    <div id="tab-verse" class="tab-panel active">
+      <div class="edit-field">
+        <label>Emotion Category</label>
+        <select id="editEmotion"></select>
+      </div>
+      <div class="edit-field">
+        <label>Bible Reference (e.g. John 3:16)</label>
+        <input type="text" id="editRef" placeholder="Book Chapter:Verse">
+      </div>
+      <div class="edit-field">
+        <label>Verse Text</label>
+        <textarea id="editText" rows="4" placeholder="Type the verse text here…"></textarea>
+      </div>
+      <div class="edit-actions">
+        <button class="btn-primary" onclick="addVerse()">✦ Add Verse</button>
+        <button class="btn-secondary" onclick="closeEdit()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- TAB: ADD EMOTION -->
+    <div id="tab-emotion" class="tab-panel">
+      <div class="edit-field">
+        <label>Emotion Name (e.g. Hopeful)</label>
+        <input type="text" id="newEmotionLabel" placeholder="e.g. Hopeful, Grateful, Joyful…">
+      </div>
+      <div class="edit-field">
+        <label>Emoji for this Emotion</label>
+        <input type="text" id="newEmotionEmoji" placeholder="e.g. 🙏 or 😊 — paste any emoji">
+      </div>
+      <p style="font-size:0.75rem;color:var(--muted);margin-bottom:14px;line-height:1.6;">💡 After adding the emotion, switch to <b>Add Verse</b> tab to add verses to it.</p>
+      <div class="edit-actions">
+        <button class="btn-primary" onclick="addEmotion()">✦ Add Emotion</button>
+        <button class="btn-secondary" onclick="closeEdit()">Cancel</button>
+      </div>
+      <div class="manage-list">
+        <h4>Your Custom Emotions</h4>
+        <div id="customEmotionsList"></div>
+      </div>
+    </div>
+
+    <!-- TAB: MANAGE VERSES -->
+    <div id="tab-manage" class="tab-panel">
+      <div class="manage-list">
+        <h4>Your Added Verses</h4>
+        <div id="manageList"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+
+<!-- Firebase SDKs -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, doc, getDocs, addDoc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+// ═══════════════════════════════════════════════════════
+//  FIREBASE CONFIG
+// ═══════════════════════════════════════════════════════
+const firebaseConfig = {
+  apiKey: "AIzaSyBF6kydqcSHp2YIuYivVRpI92XqJCDQ1Co",
+  authDomain: "verses4emotions.firebaseapp.com",
+  projectId: "verses4emotions",
+  storageBucket: "verses4emotions.firebasestorage.app",
+  messagingSenderId: "823412917731",
+  appId: "1:823412917731:web:488a36917a7b8164630cd6"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// ═══════════════════════════════════════════════════════
+//  EMOTIONS LIST
+// ═══════════════════════════════════════════════════════
+const EMOTIONS = [
+  {id:'peaceful',   label:'Peaceful',     emoji:'😌'},
+  {id:'amazed',     label:'Amazed',       emoji:'🤩'},
+  {id:'loved',      label:'Loved',        emoji:'❤️'},
+  {id:'angry',      label:'Angry',        emoji:'😠'},
+  {id:'afraid',     label:'Afraid',       emoji:'😨'},
+  {id:'annoyed',    label:'Annoyed',      emoji:'😤'},
+  {id:'frustrated', label:'Frustrated',   emoji:'😣'},
+  {id:'jealous',    label:'Jealous',      emoji:'😒'},
+  {id:'disrespect', label:'Disrespected', emoji:'😞'},
+  {id:'sad',        label:'Sad',          emoji:'😢'},
+  {id:'lonely',     label:'Lonely',       emoji:'🥺'},
+  {id:'depressed',  label:'Depressed',    emoji:'😔'},
+  {id:'hurt',       label:'Hurt',         emoji:'🤕'},
+  {id:'forgotten',  label:'Forgotten',    emoji:'🤔'},
+  {id:'ashamed',    label:'Ashamed',      emoji:'😣'},
+  {id:'sick',       label:'Sick',         emoji:'🤒'},
+  {id:'tired',      label:'Tired',        emoji:'😴'},
+  {id:'abandoned',  label:'Abandoned',    emoji:'😿'},
+  {id:'stressed',   label:'Stressed',     emoji:'😰'},
+  {id:'confused',   label:'Confused',     emoji:'😕'},
+  {id:'nervous',    label:'Nervous',      emoji:'😬'},
+  {id:'overwhelmed',label:'Overwhelmed',  emoji:'😵'},
+];
+
+// ═══════════════════════════════════════════════════════
+//  BASE VERSES (always visible to everyone)
+// ═══════════════════════════════════════════════════════
+const BASE_VERSES = {
+  peaceful:[
+    {ref:'John 16:33',text:'These things I have spoken to you, that in Me you may have peace. In the world you will have tribulation; but be of good cheer, I have overcome the world.'},
+    {ref:'John 14:27',text:'Peace I leave with you, My peace I give to you; not as the world gives do I give to you. Let not your heart be troubled, neither let it be afraid.'},
+    {ref:'Isaiah 26:3',text:'You will keep him in perfect peace, whose mind is stayed on You, because he trusts in You.'},
+    {ref:'Colossians 3:15',text:'And let the peace of God rule in your hearts, to which also you were called in one body; and be thankful.'},
+    {ref:'Psalm 4:8',text:'I will both lie down in peace, and sleep; for You alone, O Lord, make me dwell in safety.'},
+    {ref:'Romans 15:13',text:'Now may the God of hope fill you with all joy and peace in believing, that you may abound in hope by the power of the Holy Spirit.'},
+  ],
+  amazed:[
+    {ref:'Psalm 139:14',text:'I will praise You, for I am fearfully and wonderfully made; marvelous are Your works, and that my soul knows very well.'},
+    {ref:'Romans 11:33',text:'Oh, the depth of the riches both of the wisdom and knowledge of God! How unsearchable are His judgments and His ways past finding out!'},
+    {ref:'Psalm 8:3-4',text:'When I consider Your heavens, the work of Your fingers, the moon and the stars, which You have ordained, what is man that You are mindful of him?'},
+    {ref:'Jeremiah 32:17',text:'Ah, Lord God! Behold, You have made the heavens and the earth by Your great power and outstretched arm. There is nothing too hard for You.'},
+  ],
+  loved:[
+    {ref:'John 3:16',text:'For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.'},
+    {ref:'Romans 8:38-39',text:'For I am persuaded that neither death nor life, nor angels nor principalities nor powers, nor things present nor things to come, shall be able to separate us from the love of God.'},
+    {ref:'1 John 4:19',text:'We love Him because He first loved us.'},
+    {ref:'Jeremiah 31:3',text:'The Lord has appeared of old to me, saying: Yes, I have loved you with an everlasting love; therefore with lovingkindness I have drawn you.'},
+    {ref:'Zephaniah 3:17',text:'The Lord your God in your midst, the Mighty One, will save; He will rejoice over you with gladness, He will quiet you with His love, He will rejoice over you with singing.'},
+  ],
+  angry:[
+    {ref:'Ephesians 4:26',text:'Be angry, and do not sin: do not let the sun go down on your wrath.'},
+    {ref:'Proverbs 15:1',text:'A soft answer turns away wrath, but a harsh word stirs up anger.'},
+    {ref:'James 1:19-20',text:'Let every man be swift to hear, slow to speak, slow to wrath; for the wrath of man does not produce the righteousness of God.'},
+    {ref:'Psalm 37:8',text:'Cease from anger, and forsake wrath; do not fret — it only causes harm.'},
+    {ref:'Proverbs 29:11',text:'A fool vents all his feelings, but a wise man holds them back.'},
+  ],
+  afraid:[
+    {ref:'Isaiah 41:10',text:'Fear not, for I am with you; be not dismayed, for I am your God. I will strengthen you, yes, I will help you, I will uphold you with My righteous right hand.'},
+    {ref:'2 Timothy 1:7',text:'For God has not given us a spirit of fear, but of power and of love and of a sound mind.'},
+    {ref:'Psalm 23:4',text:'Yea, though I walk through the valley of the shadow of death, I will fear no evil; for You are with me; Your rod and Your staff, they comfort me.'},
+    {ref:'Psalm 56:3',text:'Whenever I am afraid, I will trust in You.'},
+  ],
+  annoyed:[
+    {ref:'Ecclesiastes 7:9',text:'Do not hasten in your spirit to be angry, for anger rests in the bosom of fools.'},
+    {ref:'Colossians 3:13',text:'Bearing with one another, and forgiving one another, if anyone has a complaint against another; even as Christ forgave you, so you also must do.'},
+    {ref:'Proverbs 12:16',text:'A fool\'s wrath is known at once, but a prudent man covers shame.'},
+    {ref:'Romans 12:21',text:'Do not be overcome by evil, but overcome evil with good.'},
+  ],
+  frustrated:[
+    {ref:'Proverbs 19:11',text:'The discretion of a man makes him slow to anger, and his glory is to overlook a transgression.'},
+    {ref:'Romans 5:3-4',text:'We also glory in tribulations, knowing that tribulation produces perseverance; and perseverance, character; and character, hope.'},
+    {ref:'James 1:2-4',text:'Count it all joy when you fall into various trials, knowing that the testing of your faith produces patience.'},
+    {ref:'Lamentations 3:25',text:'The Lord is good to those who wait for Him, to the soul who seeks Him.'},
+  ],
+  jealous:[
+    {ref:'Proverbs 14:30',text:'A sound heart is life to the body, but envy is rottenness to the bones.'},
+    {ref:'1 Corinthians 13:4',text:'Love suffers long and is kind; love does not envy; love does not parade itself, is not puffed up.'},
+    {ref:'Hebrews 13:5',text:'Let your conduct be without covetousness; be content with such things as you have.'},
+    {ref:'Psalm 37:1',text:'Do not fret because of evildoers, nor be envious of the workers of iniquity.'},
+  ],
+  disrespect:[
+    {ref:'Romans 12:17-18',text:'Repay no one evil for evil. Have regard for good things in the sight of all men. If it is possible, live peaceably with all men.'},
+    {ref:'Matthew 5:44',text:'But I say to you, love your enemies, bless those who curse you, do good to those who hate you, and pray for those who spitefully use you.'},
+    {ref:'1 Peter 3:9',text:'Not returning evil for evil or reviling for reviling, but on the contrary blessing, knowing that you were called to this, that you may inherit a blessing.'},
+  ],
+  sad:[
+    {ref:'Psalm 34:18',text:'The Lord is near to those who have a broken heart, and saves such as have a contrite spirit.'},
+    {ref:'Matthew 5:4',text:'Blessed are those who mourn, for they shall be comforted.'},
+    {ref:'Revelation 21:4',text:'And God will wipe away every tear from their eyes; there shall be no more death, nor sorrow, nor crying. There shall be no more pain.'},
+    {ref:'Psalm 30:5',text:'Weeping may endure for a night, but joy comes in the morning.'},
+    {ref:'John 11:35',text:'Jesus wept.'},
+  ],
+  lonely:[
+    {ref:'Deuteronomy 31:6',text:'Be strong and of good courage, do not fear nor be afraid of them; for the Lord your God, He is the One who goes with you. He will not leave you nor forsake you.'},
+    {ref:'Hebrews 13:5',text:'He Himself has said, I will never leave you nor forsake you.'},
+    {ref:'Matthew 28:20',text:'Lo, I am with you always, even to the end of the age.'},
+    {ref:'Psalm 68:6',text:'God sets the solitary in families; He brings out those who are bound into prosperity.'},
+  ],
+  depressed:[
+    {ref:'Psalm 42:11',text:'Why are you cast down, O my soul? And why are you disquieted within me? Hope in God; for I shall yet praise Him.'},
+    {ref:'Isaiah 40:31',text:'But those who wait on the Lord shall renew their strength; they shall mount up with wings like eagles, they shall run and not be weary.'},
+    {ref:'Romans 8:28',text:'And we know that all things work together for good to those who love God, to those who are the called according to His purpose.'},
+    {ref:'Psalm 40:2',text:'He also brought me up out of a horrible pit, out of the miry clay, and set my feet upon a rock, and established my steps.'},
+  ],
+  hurt:[
+    {ref:'Psalm 147:3',text:'He heals the brokenhearted and binds up their wounds.'},
+    {ref:'Isaiah 53:5',text:'But He was wounded for our transgressions, He was bruised for our iniquities; and by His stripes we are healed.'},
+    {ref:'1 Peter 5:7',text:'Casting all your care upon Him, for He cares for you.'},
+    {ref:'Psalm 34:18',text:'The Lord is near to those who have a broken heart, and saves such as have a contrite spirit.'},
+  ],
+  forgotten:[
+    {ref:'Isaiah 49:15-16',text:'Can a woman forget her nursing child? Surely they may forget, yet I will not forget you. See, I have inscribed you on the palms of My hands.'},
+    {ref:'Luke 12:7',text:'But the very hairs of your head are all numbered. Do not fear therefore; you are of more value than many sparrows.'},
+    {ref:'Psalm 27:10',text:'When my father and my mother forsake me, then the Lord will take care of me.'},
+  ],
+  ashamed:[
+    {ref:'Romans 8:1',text:'There is therefore now no condemnation to those who are in Christ Jesus.'},
+    {ref:'Isaiah 54:4',text:'Do not fear, for you will not be ashamed; neither be disgraced, for you will not be put to shame.'},
+    {ref:'1 John 1:9',text:'If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.'},
+    {ref:'Romans 10:11',text:'For the Scripture says, Whoever believes on Him will not be put to shame.'},
+  ],
+  sick:[
+    {ref:'James 5:15',text:'And the prayer of faith will save the sick, and the Lord will raise him up.'},
+    {ref:'Jeremiah 17:14',text:'Heal me, O Lord, and I shall be healed; save me, and I shall be saved, for You are my praise.'},
+    {ref:'Exodus 15:26',text:'For I am the Lord who heals you.'},
+    {ref:'Psalm 103:3',text:'Who forgives all your iniquities, who heals all your diseases.'},
+    {ref:'3 John 1:2',text:'Beloved, I pray that you may prosper in all things and be in health, just as your soul prospers.'},
+  ],
+  tired:[
+    {ref:'Isaiah 40:29',text:'He gives power to the weak, and to those who have no might He increases strength.'},
+    {ref:'Matthew 11:28-29',text:'Come to Me, all you who labor and are heavy laden, and I will give you rest. Take My yoke upon you and learn from Me, and you will find rest for your souls.'},
+    {ref:'Galatians 6:9',text:'And let us not grow weary while doing good, for in due season we shall reap if we do not lose heart.'},
+    {ref:'Psalm 62:1',text:'Truly my soul silently waits for God; from Him comes my salvation.'},
+  ],
+  abandoned:[
+    {ref:'Psalm 27:10',text:'When my father and my mother forsake me, then the Lord will take care of me.'},
+    {ref:'Romans 8:38-39',text:'Neither death nor life, nor angels nor principalities, shall be able to separate us from the love of God which is in Christ Jesus our Lord.'},
+    {ref:'John 14:18',text:'I will not leave you orphans; I will come to you.'},
+    {ref:'Isaiah 41:9',text:'I have chosen you and have not cast you away.'},
+  ],
+  stressed:[
+    {ref:'Matthew 11:28',text:'Come to Me, all you who labor and are heavy laden, and I will give you rest.'},
+    {ref:'Philippians 4:6-7',text:'Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known to God; and the peace of God, which surpasses all understanding, will guard your hearts and minds.'},
+    {ref:'1 Peter 5:7',text:'Casting all your care upon Him, for He cares for you.'},
+    {ref:'Psalm 55:22',text:'Cast your burden on the Lord, and He shall sustain you; He shall never permit the righteous to be moved.'},
+  ],
+  confused:[
+    {ref:'Proverbs 3:5-6',text:'Trust in the Lord with all your heart, and lean not on your own understanding; in all your ways acknowledge Him, and He shall direct your paths.'},
+    {ref:'James 1:5',text:'If any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach, and it will be given to him.'},
+    {ref:'Isaiah 30:21',text:'Your ears shall hear a word behind you, saying, This is the way, walk in it.'},
+    {ref:'Psalm 32:8',text:'I will instruct you and teach you in the way you should go; I will guide you with My eye.'},
+  ],
+  nervous:[
+    {ref:'Joshua 1:9',text:'Have I not commanded you? Be strong and of good courage; do not be afraid, nor be dismayed, for the Lord your God is with you wherever you go.'},
+    {ref:'Philippians 4:13',text:'I can do all things through Christ who strengthens me.'},
+    {ref:'Psalm 56:3',text:'Whenever I am afraid, I will trust in You.'},
+    {ref:'Isaiah 41:10',text:'Fear not, for I am with you; be not dismayed, for I am your God. I will strengthen you, yes, I will help you.'},
+  ],
+  overwhelmed:[
+    {ref:'Psalm 61:2',text:'From the end of the earth I will cry to You, when my heart is overwhelmed; lead me to the rock that is higher than I.'},
+    {ref:'Isaiah 43:2',text:'When you pass through the waters, I will be with you; and through the rivers, they shall not overflow you.'},
+    {ref:'Nahum 1:7',text:'The Lord is good, a stronghold in the day of trouble; and He knows those who trust in Him.'},
+    {ref:'2 Corinthians 4:17',text:'For our light and momentary troubles are achieving for us an eternal glory that far outweighs them all.'},
+  ],
+};
+
+// ═══════════════════════════════════════════════════════
+//  APP STATE
+// ═══════════════════════════════════════════════════════
+let userEmotions = [];
+let firebaseVerses = {};   // loaded from Firestore
+let activeEmotion = null;
+
+function getAllEmotions() {
+  return [...EMOTIONS, ...userEmotions];
+}
+function getAllVerses(id) {
+  const base = BASE_VERSES[id] || [];
+  const fb = firebaseVerses[id] || [];
+  return [...base, ...fb];
+}
+
+// ═══════════════════════════════════════════════════════
+//  FIRESTORE — load all verses in real time
+// ═══════════════════════════════════════════════════════
+function listenToVerses() {
+  onSnapshot(collection(db, 'verses'), (snapshot) => {
+    firebaseVerses = {};
+    snapshot.forEach(docSnap => {
+      const data = docSnap.data();
+      if (!firebaseVerses[data.emotion]) firebaseVerses[data.emotion] = [];
+      firebaseVerses[data.emotion].push({ref: data.ref, text: data.text, docId: docSnap.id});
+    });
+    // refresh panel if open
+    if (activeEmotion) showVerses(activeEmotion);
+    renderManageList();
+  });
+}
+
+function listenToEmotions() {
+  onSnapshot(collection(db, 'emotions'), (snapshot) => {
+    userEmotions = [];
+    snapshot.forEach(docSnap => {
+      const d = docSnap.data();
+      userEmotions.push({id: d.id, label: d.label, emoji: d.emoji, docId: docSnap.id});
+    });
+    renderEmotions();
+    // update dropdown
+    const sel = document.getElementById('editEmotion');
+    if(sel) sel.innerHTML = getAllEmotions().map(e => `<option value="${e.id}">${e.emoji} ${e.label}</option>`).join('');
+    renderCustomEmotionsList();
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  DAILY VERSE
+// ═══════════════════════════════════════════════════════
+async function loadDailyVerse() {
+  const dt = document.getElementById('dailyText');
+  const dr = document.getElementById('dailyRef');
+  const fallbacks = [
+    {text:'For the message of the cross is foolishness to those who are perishing, but to us who are being saved it is the power of God.',ref:'1 Corinthians 1:18'},
+    {text:'I can do all things through Christ who strengthens me.',ref:'Philippians 4:13'},
+    {text:'The Lord is my shepherd; I shall not want.',ref:'Psalm 23:1'},
+    {text:'Trust in the Lord with all your heart, and lean not on your own understanding.',ref:'Proverbs 3:5'},
+    {text:'For God so loved the world that He gave His only begotten Son.',ref:'John 3:16'},
+    {text:'Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.',ref:'Joshua 1:9'},
+    {text:'And we know that in all things God works for the good of those who love Him.',ref:'Romans 8:28'},
+    {text:'The Lord is near to those who have a broken heart, and saves such as have a contrite spirit.',ref:'Psalm 34:18'},
+    {text:'He gives power to the weak, and to those who have no might He increases strength.',ref:'Isaiah 40:29'},
+    {text:'Cast your burden on the Lord, and He shall sustain you.',ref:'Psalm 55:22'},
+    {text:'Peace I leave with you, My peace I give to you; not as the world gives do I give to you.',ref:'John 14:27'},
+    {text:'For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.',ref:'Jeremiah 29:11'},
+    {text:'I will never leave you nor forsake you.',ref:'Hebrews 13:5'},
+    {text:'Weeping may endure for a night, but joy comes in the morning.',ref:'Psalm 30:5'},
+  ];
+  const day = Math.floor((Date.now() - new Date(new Date().getFullYear(),0,0).getTime()) / 86400000);
+  const fallback = fallbacks[day % fallbacks.length];
+  try {
+    const res = await fetch('https://beta.ourmanna.com/api/v1/get?format=json&order=daily');
+    if (res.ok) {
+      const data = await res.json();
+      const v = data.verse?.details;
+      if (v && v.text && v.reference) {
+        dt.innerHTML = `<em>"${v.text.trim()}"</em>`;
+        dr.textContent = `— ${v.reference}`;
+        return;
+      }
+    }
+  } catch(e) {}
+  dt.innerHTML = `<em>"${fallback.text}"</em>`;
+  dr.textContent = `— ${fallback.ref}`;
+}
+
+// ═══════════════════════════════════════════════════════
+//  EMOTIONS GRID
+// ═══════════════════════════════════════════════════════
+function renderEmotions() {
+  document.getElementById('emotionsGrid').innerHTML = getAllEmotions().map(e =>
+    `<button class="emotion-btn" onclick="selectEmotion('${e.id}')" id="btn-${e.id}">
+      <span class="emotion-emoji">${e.emoji}</span>${e.label}
+    </button>`
+  ).join('');
+}
+
+function selectEmotion(id) {
+  activeEmotion = id;
+  document.querySelectorAll('.emotion-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('btn-'+id);
+  if(btn) btn.classList.add('active');
+  showVerses(id);
+}
+
+function showVerses(id) {
+  const emo = getAllEmotions().find(e => e.id === id);
+  if(!emo) return;
+  const verses = getAllVerses(id);
+  const panel = document.getElementById('verses-panel');
+  document.getElementById('versesPanelTitle').innerHTML = `<em>${emo.emoji} ${emo.label}</em>`;
+  document.getElementById('versesContainer').innerHTML = verses.length
+    ? verses.map(v => `
+        <div class="verse-card">
+          <div class="verse-ref">${v.ref}</div>
+          <div class="verse-text">"${v.text}"</div>
+        </div>`).join('')
+    : '<div class="verses-empty">No verses yet for this emotion.<br>Tap ✏️ to add some!</div>';
+  panel.classList.add('visible');
+  setTimeout(() => panel.scrollIntoView({behavior:'smooth',block:'start'}), 120);
+}
+
+// ═══════════════════════════════════════════════════════
+//  EDIT MODAL
+// ═══════════════════════════════════════════════════════
+function openEdit() {
+  const sel = document.getElementById('editEmotion');
+  sel.innerHTML = getAllEmotions().map(e => `<option value="${e.id}">${e.emoji} ${e.label}</option>`).join('');
+  if (activeEmotion) sel.value = activeEmotion;
+  renderManageList();
+  renderCustomEmotionsList();
+  document.getElementById('editModal').classList.add('open');
+}
+function closeEdit() { document.getElementById('editModal').classList.remove('open'); }
+
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.edit-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  if(btn) btn.classList.add('active');
+}
+
+async function addVerse() {
+  const emo = document.getElementById('editEmotion').value;
+  const ref = document.getElementById('editRef').value.trim();
+  const text = document.getElementById('editText').value.trim();
+  if (!ref || !text) { showToast('Please fill in both fields ✦'); return; }
+  showToast('Saving…');
+  try {
+    await addDoc(collection(db, 'verses'), { emotion: emo, ref, text });
+    document.getElementById('editRef').value = '';
+    document.getElementById('editText').value = '';
+    showToast('Verse saved for everyone! ✦');
+  } catch(e) {
+    showToast('Error saving verse. Try again.');
+    console.error(e);
+  }
+}
+
+async function deleteVerse(docId) {
+  try {
+    await deleteDoc(doc(db, 'verses', docId));
+    showToast('Verse removed ✦');
+  } catch(e) {
+    showToast('Error deleting. Try again.');
+  }
+}
+
+async function addEmotion() {
+  const label = document.getElementById('newEmotionLabel').value.trim();
+  const emoji = document.getElementById('newEmotionEmoji').value.trim() || '✨';
+  if (!label) { showToast('Please enter an emotion name ✦'); return; }
+  const id = label.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
+  if (getAllEmotions().find(e => e.id === id)) { showToast('This emotion already exists!'); return; }
+  try {
+    await addDoc(collection(db, 'emotions'), {id, label, emoji});
+    document.getElementById('newEmotionLabel').value = '';
+    document.getElementById('newEmotionEmoji').value = '';
+    showToast(`"${label}" added for everyone! ✦`);
+  } catch(e) {
+    showToast('Error saving. Try again.');
+  }
+}
+
+async function deleteEmotion(docId, id) {
+  try {
+    await deleteDoc(doc(db, 'emotions', docId));
+    // delete its verses too
+    const snap = await getDocs(collection(db, 'verses'));
+    const toDelete = snap.docs.filter(d => d.data().emotion === id);
+    await Promise.all(toDelete.map(d => deleteDoc(doc(db, 'verses', d.id))));
+    showToast('Emotion removed ✦');
+  } catch(e) {
+    showToast('Error deleting. Try again.');
+  }
+}
+
+function renderManageList() {
+  const el = document.getElementById('manageList');
+  if(!el) return;
+  const items = [];
+  for (const [emo, verses] of Object.entries(firebaseVerses)) {
+    const eObj = getAllEmotions().find(e => e.id === emo);
+    verses.forEach(v => {
+      items.push(`<div class="manage-item">
+        <span><b>${eObj ? eObj.emoji+' '+eObj.label : emo}</b> — ${v.ref}</span>
+        <button class="del-btn" onclick="deleteVerse('${v.docId}')">✕</button>
+      </div>`);
+    });
+  }
+  el.innerHTML = items.length
+    ? items.join('')
+    : '<p style="font-size:0.8rem;color:var(--muted);text-align:center;padding:14px 0">No custom verses added yet</p>';
+}
+
+function renderCustomEmotionsList() {
+  const el = document.getElementById('customEmotionsList');
+  if(!el) return;
+  el.innerHTML = userEmotions.length
+    ? userEmotions.map(e =>
+        `<div class="manage-item">
+          <span>${e.emoji} <b>${e.label}</b></span>
+          <button class="del-btn" onclick="deleteEmotion('${e.docId}','${e.id}')">✕</button>
+        </div>`).join('')
+    : '<p style="font-size:0.8rem;color:var(--muted);text-align:center;padding:14px 0">No custom emotions added yet</p>';
+}
+
+// ═══════════════════════════════════════════════════════
+//  UTILS
+// ═══════════════════════════════════════════════════════
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+function showHome() { document.getElementById('home').scrollIntoView({behavior:'smooth'}); }
+function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 30);
+});
+document.getElementById('editModal').addEventListener('click', function(e) {
+  if (e.target === this) closeEdit();
+});
+
+// make these accessible from inline onclick
+window.selectEmotion = selectEmotion;
+window.openEdit = openEdit;
+window.closeEdit = closeEdit;
+window.switchTab = switchTab;
+window.addVerse = addVerse;
+window.deleteVerse = deleteVerse;
+window.addEmotion = addEmotion;
+window.deleteEmotion = deleteEmotion;
+window.showHome = showHome;
+window.toggleMobile = toggleMobile;
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+renderEmotions();
+loadDailyVerse();
+listenToVerses();
+listenToEmotions();
+</script>
+
+</body>
+</html>
