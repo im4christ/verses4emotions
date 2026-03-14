@@ -161,7 +161,7 @@ footer{padding:36px 5%;text-align:center;border-top:1px solid var(--border);back
 footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.06em;}
 
 /* EDIT FAB */
-.edit-fab{position:fixed;bottom:28px;right:28px;z-index:150;background:var(--dusty);color:#fff;border:none;width:54px;height:54px;border-radius:50%;cursor:pointer;font-size:1.2rem;box-shadow:0 4px 22px rgba(201,123,110,0.42);transition:all 0.3s;display:flex;align-items:center;justify-content:center;}
+.edit-fab{position:fixed;bottom:28px;right:28px;z-index:150;background:var(--dusty);color:#fff;border:none;width:54px;height:54px;border-radius:50%;cursor:pointer;font-size:1.2rem;box-shadow:0 4px 22px rgba(201,123,110,0.42);transition:all 0.3s;display:none;align-items:center;justify-content:center;}
 .edit-fab:hover{background:var(--gold);transform:scale(1.1);}
 
 /* EDIT MODAL */
@@ -844,6 +844,11 @@ window.toggleMobile = toggleMobile;
 // ═══════════════════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════════════════
+// Show edit button only if ?admin is in the URL
+if (window.location.search.includes('admin')) {
+  const fab = document.getElementById('editFabBtn');
+  fab.style.display = 'flex';
+}
 document.getElementById('editFabBtn').addEventListener('click', openEdit);
 document.getElementById('editModal').addEventListener('click', function(e) {
   if (e.target === this) closeEdit();
