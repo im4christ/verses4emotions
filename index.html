@@ -325,7 +325,7 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.06em;}
 </footer>
 
 <!-- EDIT FAB -->
-<button class="edit-fab" onclick="openEdit()" title="Add a new verse ✦">✏️</button>
+<button class="edit-fab" id="editFabBtn" title="Add a new verse ✦">✏️</button>
 
 <!-- EDIT MODAL -->
 <div class="edit-modal" id="editModal">
@@ -713,6 +713,11 @@ function showVerses(id) {
 //  EDIT MODAL
 // ═══════════════════════════════════════════════════════
 function openEdit() {
+  const pwd = prompt('🔒 Enter password to edit:');
+  if (pwd !== 'abi4christ2007') {
+    showToast('Incorrect password ✕');
+    return;
+  }
   const sel = document.getElementById('editEmotion');
   sel.innerHTML = getAllEmotions().map(e => `<option value="${e.id}">${e.emoji} ${e.label}</option>`).join('');
   if (activeEmotion) sel.value = activeEmotion;
@@ -824,13 +829,6 @@ function showToast(msg) {
 }
 function showHome() { document.getElementById('home').scrollIntoView({behavior:'smooth'}); }
 function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 30);
-});
-document.getElementById('editModal').addEventListener('click', function(e) {
-  if (e.target === this) closeEdit();
-});
-
 // make these accessible from inline onclick
 window.selectEmotion = selectEmotion;
 window.openEdit = openEdit;
@@ -846,6 +844,13 @@ window.toggleMobile = toggleMobile;
 // ═══════════════════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════════════════
+document.getElementById('editFabBtn').addEventListener('click', openEdit);
+document.getElementById('editModal').addEventListener('click', function(e) {
+  if (e.target === this) closeEdit();
+});
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 30);
+});
 renderEmotions();
 loadDailyVerse();
 listenToVerses();
