@@ -476,7 +476,6 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.06em;}
     <div class="confetti-wrap" id="confettiWrap"></div>
     <div class="stars-wrap" id="starsWrap">⭐✨🌟✨⭐</div>
     <div class="random-label">✦ Your Verse for Today ✦</div>
-    <div class="random-emotion" id="randomEmotion"></div>
     <div class="random-verse-text" id="randomText"></div>
     <div class="random-verse-ref" id="randomRef"></div>
     <div class="random-actions">
@@ -1046,7 +1045,7 @@ function showRandomVerse() {
   const emo = withVerses[Math.floor(Math.random() * withVerses.length)];
   const verses = getAllVerses(emo.id);
   const verse = verses[Math.floor(Math.random() * verses.length)];
-  document.getElementById("randomEmotion").textContent = emo.emoji + " " + emo.label;
+  
   document.getElementById("randomText").textContent = verse.text;
   document.getElementById("randomRef").textContent = "— " + verse.ref;
   document.getElementById("randomOverlay").classList.add("show");
